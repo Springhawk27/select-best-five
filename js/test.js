@@ -11,19 +11,33 @@
 
 // })
 
+
+function disableButton(playerId) {
+    document.getElementById(playerId).disabled = true;
+    document.getElementById(playerId).style.backgroundColor = 'gray';
+
+
+}
+
 const players = [];
 
 document.getElementById('players').addEventListener('click', function (event) {
     const playerName = event.target.value;
     console.log(playerName)
 
-    document.getElementById("btn-player1").disabled = true;
-    document.getElementById("btn-player1").style.backgroundColor = 'gray';
 
 
 
-    if (!players.includes(playerName) && players.length <= 5) {
+
+
+    if (!players.includes(playerName) && players.length < 5) {
         players.push(playerName);
+
+        const playerId = event.target.id;
+        disableButton(playerId)
+    }
+    else {
+        alert('You can not add more than 5 players')
     }
     console.log(players)
 
