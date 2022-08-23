@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dream League</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -27,14 +28,14 @@
     <main class="bg-slate-800 px-6">
         <section class="  flex lg:w-11/12 w-full  mx-auto gap-4 pt-5 pb-5">
             <div class="flex-1  w-3/4">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-4 w-11/12">
-
+                <div id="players" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-4 w-11/12">
                     <div class="bg-black  rounded border border-indigo-400">
                         <img class="bg-red-900 w-full " src="images/liton.png" alt="">
                         <div class="p-3">
-                            <p class=" text-base md:text-lg lg:text-xl text-white">Liton Das</p>
+                            <p id="player1" class=" text-base md:text-lg lg:text-xl text-white">Liton Das</p>
                             <p class="pb-2 text-gray-500 text-sm">Comilla Victorians</p>
-                            <button class="w-full bg-blue-500 text-white px-6 py-1 rounded">Select</button>
+                            <button id="btn-player1" class="w-full bg-blue-500 text-white px-6 py-1 rounded"
+                                value="Liton Das">Select</button>
                         </div>
                     </div>
                     <div class="bg-black  rounded border border-indigo-400">
@@ -42,7 +43,8 @@
                         <div class="p-3">
                             <p class="  text-base md:text-lg lg:text-xl text-white">Tamim Iqbal</p>
                             <p class="pb-2 text-gray-500 text-sm">Minster Group Dhaka</p>
-                            <button class="w-full bg-blue-500 text-white px-6 py-1 rounded">Select</button>
+                            <button class="w-full bg-blue-500 text-white px-6 py-1 rounded"
+                                value="Tamim Iqbal">Select</button>
                         </div>
                     </div>
                     <div class="bg-black  rounded border border-indigo-400">
@@ -50,7 +52,8 @@
                         <div class="p-3">
                             <p class=" text-base md:text-lg lg:text-xl text-white">Mushfiqur Rahim</p>
                             <p class="pb-2 text-gray-500 text-sm">Khulna Tigers</p>
-                            <button class="w-full bg-blue-500 text-white px-6 py-1 rounded">Select</button>
+                            <button class="w-full bg-blue-500 text-white px-6 py-1 rounded"
+                                value="Mushfiqur Rahim">Select</button>
                         </div>
                     </div>
                     <div class="bg-black rounded border border-indigo-400">
@@ -58,7 +61,8 @@
                         <div class="p-3">
                             <p class="  text-base md:text-lg lg:text-xl text-white">Mahamudulla Riad</p>
                             <p class="pb-2 text-gray-500 text-sm">Minster Group Dhaka</p>
-                            <button class="w-full bg-blue-500 text-white px-6 py-1 rounded">Select</button>
+                            <button class="w-full bg-blue-500 text-white px-6 py-1 rounded"
+                                value="Mahamudulla Riad">Select</button>
                         </div>
                     </div>
                     <div class="bg-black  rounded border border-indigo-400">
@@ -66,7 +70,8 @@
                         <div class="p-3">
                             <p class=" text-base md:text-lg lg:text-xl text-white">Sakib Al Hasan</p>
                             <p class="pb-2 text-gray-500 text-sm">Fortune Barisal</p>
-                            <button class="w-full bg-blue-500 text-white px-6 py-1 rounded">Select</button>
+                            <button class="w-full bg-blue-500 text-white px-6 py-1 rounded"
+                                value="Sakib Al Hasan">Select</button>
                         </div>
                     </div>
                     <div class="bg-black rounded border border-indigo-400">
@@ -74,7 +79,8 @@
                         <div class="p-3">
                             <p class="  text-base md:text-lg lg:text-xl text-white">Mustafizur Rahman</p>
                             <p class="pb-2 text-gray-500 text-sm">Comilla Victorians</p>
-                            <button class="w-full bg-blue-500 text-white px-6 py-1 rounded">Select</button>
+                            <button class="w-full bg-blue-500 text-white px-6 py-1 rounded"
+                                value="Mustafizur Rahman">Select</button>
                         </div>
                     </div>
                 </div>
@@ -84,9 +90,8 @@
                     <h1 class=" text-base md:text-lg lg:text-xltext-xl border-b-4 border-blue-500 text-center">
                         Selected -
                         V</h1>
-                    <ol class="list-decimal pl-5 py-3 h-48 overflow-y-auto ">
+                    <ol id="player-list" class="list-decimal pl-5 py-3 h-48 overflow-y-auto ">
 
-                        <li class="py-1 text-sm md:text-base lg:text-lg ">Mahamudulla Riad</li>
 
                     </ol>
                 </div>
@@ -131,6 +136,12 @@
         </section>
 
     </main>
+    <footer class="text-center bg-black text-gray-200  border-t border-sky-500 py-12">
+        <p class="mb-4 md:text-3xl text-2xl text-sky-500">Dream League</p>
+        <p class="">Copyright @ 2022 All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/test.js"></script>
 </body>
 
 </html>
