@@ -30,34 +30,23 @@ document.getElementById('players').addEventListener('click', function (event) {
 
 
 
-
 document.getElementById('player-expense-button').addEventListener('click', function () {
 
-    const playerExpenseField = getId('player-expense-field');
-    const playerExpenseAmountString = playerExpenseField.value;
-    const playerExpenseAmount = parseFloat(playerExpenseAmountString);
+    getPlayerExpense()
 
-    if (players.length == 0) {
-        alert('Please add some player first');
-    }
-    else if (playerExpenseAmount) {
-        const totalPlayerExpense = playerExpense(players, playerExpenseAmount)
-
-        const totalPlayerExpenseElement = getId('total-player-expense');
-        totalPlayerExpenseElement.innerText = totalPlayerExpense;
-    }
-    else {
-        alert('Please enter per player expense');
-    }
-
-    playerExpenseField.value = '';
 })
 
 
 document.getElementById('total-expense-button').addEventListener('click', function () {
+
+    const playerExpenseField = getId('player-expense-field');
+
+    getPlayerExpense()
+
     const totalPlayerExpenseElement = getId('total-player-expense');
     const totalPlayerExpenseString = totalPlayerExpenseElement.innerText;
     const totalPlayerExpenseAmount = parseFloat(totalPlayerExpenseString);
+
 
 
     const managerExpenseField = getId('manager-field');
@@ -84,6 +73,7 @@ document.getElementById('total-expense-button').addEventListener('click', functi
 
     managerExpenseField.value = '';
     couchExpenseField.value = '';
+    playerExpenseField.value = '';
 
 })
 

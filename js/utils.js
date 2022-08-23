@@ -13,9 +13,25 @@ function disableButton(playerId) {
 function playerExpense(players, playerExpenseAmount) {
     const totalPlayer = players.length;
     const totalPlayerExpense = totalPlayer * playerExpenseAmount;
-    console.log(totalPlayerExpense)
-
     return totalPlayerExpense
+}
 
+function getPlayerExpense() {
 
+    const playerExpenseField = getId('player-expense-field');
+    const playerExpenseAmountString = playerExpenseField.value;
+    const playerExpenseAmount = parseFloat(playerExpenseAmountString);
+
+    if (players.length == 0) {
+        alert('Please add some player first');
+    }
+    else if (playerExpenseAmount) {
+        const totalPlayerExpense = playerExpense(players, playerExpenseAmount)
+
+        const totalPlayerExpenseElement = getId('total-player-expense');
+        totalPlayerExpenseElement.innerText = totalPlayerExpense;
+    }
+    else {
+        alert('Please enter per player expense');
+    }
 }
