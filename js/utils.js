@@ -16,7 +16,7 @@ function playerExpense(players, playerExpenseAmount) {
     return totalPlayerExpense
 }
 
-function getPlayerExpense() {
+function getPlayerExpense(players) {
 
     const playerExpenseField = getId('player-expense-field');
     const playerExpenseAmountString = playerExpenseField.value;

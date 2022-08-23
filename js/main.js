@@ -32,7 +32,7 @@ document.getElementById('players').addEventListener('click', function (event) {
 
 document.getElementById('player-expense-button').addEventListener('click', function () {
 
-    getPlayerExpense()
+    getPlayerExpense(players)
 
 })
 
@@ -41,7 +41,7 @@ document.getElementById('total-expense-button').addEventListener('click', functi
 
     const playerExpenseField = getId('player-expense-field');
 
-    getPlayerExpense()
+    getPlayerExpense(players)
 
     const totalPlayerExpenseElement = getId('total-player-expense');
     const totalPlayerExpenseString = totalPlayerExpenseElement.innerText;
